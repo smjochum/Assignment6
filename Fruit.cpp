@@ -37,7 +37,7 @@ Fruit::~Fruit() {
 void Fruit::Display() {
   int width = 25;
   cout << fixed << setprecision(2);
-  cout << left << name << setw(width) << right << weight << setw(width)<< right << unit_price << endl;
+  cout << left << setw(width)<< name << setw(width) << right << weight << setw(width)<< right << unit_price << endl;
 }
 
 bool Fruit::Order(double requested_weight, double &order_cost) {

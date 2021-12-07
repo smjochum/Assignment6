@@ -97,7 +97,6 @@ void OnlineSuperMarket::ShowBanner() {
   cout << "A vast, modern store for Korean foods & housewares, \nplus a deli with a wide array of prepared dishes.";
   cout << "\n------------------------------------------------------------\n" << endl;
 
-
 }
 
 void OnlineSuperMarket::Menu() {
@@ -142,7 +141,6 @@ void OnlineSuperMarket::Sort() {
   while (swapped) {
     swapped = false;
     j++;
-
     for (int i = 0; i < SIZE - j; i++) {
       if (fruit_list[i].GetName().compare(fruit_list[i + 1].GetName()) > 0) {
         temp_fruit = fruit_list[i];
@@ -152,6 +150,8 @@ void OnlineSuperMarket::Sort() {
       }
     }
   }
+  cout << "\nThe following one line of fruit data is a temporary variable for "
+          "internal purposes, please disregard." << endl;
 }
 
 void OnlineSuperMarket::ShowFruits() {
