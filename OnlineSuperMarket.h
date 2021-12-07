@@ -48,6 +48,7 @@ class OnlineSuperMarket {
   void Menu();
   string GetUserFruitSelection();
   double GetUserWeight();
+  void ShowBanner();
 };
 
 #endif //ASSIGNMENT6__ONLINESUPERMARKET_H_

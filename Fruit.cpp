@@ -31,7 +31,7 @@ Fruit::Fruit(string fruit_name, double fruit_weight, double fruit_unit_price) {
 
 Fruit::~Fruit() {
   cout << fixed << setprecision(2);
-  cout << "Fruit " << name << ", " << "Weight = " << weight << " rotten." << endl;
+  cout << "Fruit: " << name << ", " << "Weight = " << weight << " rotten." << endl;
 }
 
 void Fruit::Display() {
@@ -41,16 +41,19 @@ void Fruit::Display() {
 }
 
 bool Fruit::Order(double requested_weight, double &order_cost) {
-  if (requested_weight < weight) {
+  cout << "Requested weight: " << requested_weight;
+  if (requested_weight > weight) {
     order_cost = 0;
+    cout << "weight: " << weight;
+    cout << "Order returned false";
     return false;
   } else {
+    cout << "Order returned true";
     this->weight -= requested_weight;
     order_cost = requested_weight * unit_price;
     return true;
   }
 }
-
 string Fruit::GetName() {
   return name;
 }
